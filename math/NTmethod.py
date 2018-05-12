@@ -15,7 +15,7 @@ x = (x - y/x)/2
 '''
 def ntmethod(y):
 	x = 1.
-	while abs(x*x - y) > 1e-6 :
+	while abs(x*x - y) > 1e-6 :	#判断条件，停止迭代
 		x = (x + y/x)/2
 	return x 
 
