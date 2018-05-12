@@ -1,40 +1,9 @@
-# -*- coding: utf-8 -*-
 """
-Spyder Editor
+有理数类：
+__add__，实现加法功能
+_num,私有，用函数def num(self)，提供访问
 
-This is a temporary script file.
-"""
-
-class Ratina10:
-    def __init__(self, num, den):
-        self.num = num
-        self.den = den
-    
-    def plus(self, another):
-        den = self.den * another. den
-        num = self.num*another.den + self.den*another.num
-        return Ratina10(num, den)
-    
-    def print(self):
-        print(str(self.num)+"/"+str(self.den))
-        
-    def print2(self):
-        print("{0}/{1}".format(self.num, self.den))
-        
-    @staticmethod
-    def _gcd(m, n):
-        if n == 0:
-            m, n = n, m
-        while m != 0:
-            m, n = n%m, m
-        return n
-        
-
-#r1 = Ratina10(3, 5)
-#r2 = r1.plus(Ratina10(7,15))
-#r2.print2()
-#print(r1._gcd(100,33))
-         
+"""     
     
 class Rational:
     @staticmethod
@@ -72,10 +41,12 @@ class Rational:
     	return Rational(slef._num*another.num(), self._den*another.den())
 
     def __lt__():
-    	return self.num*another.den() < self._den*another.num()
+    	return self._num*another.den() < self._den*another.num()
 
     def print(self):
-        print(str(self.num)+"/"+str(self.den))
+        print(str(self._num)+"/"+str(self._den))
 
 r1 = Rational(2,3)
-print(r1._gcd(100,33))
+r2 = Rational(1,2)
+r = r1+r2
+r.print()
